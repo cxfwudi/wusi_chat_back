@@ -42,11 +42,10 @@ app.use((err,req,res,next) => {
 const server = app.listen(process.env.PORT,()=>{
   console.log(`Server Started on Port ${process.env.PORT}`)
 })
-
+// console.log(server);
 const io = socker(server,{
   cors:{
     origin:"http://localhost:3000",
-    credentials:true,
   }
 });
 //map用于存储socket（1对1）
